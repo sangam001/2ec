@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-  useDocumentTitle('Salinaka | Home');
+  useDocumentTitle('JexOmen | Home');
   useScrollTop();
 
   const {
@@ -33,13 +33,13 @@ const Home = () => {
         <div className="banner">
           <div className="banner-desc">
             <h1 className="text-thin">
-              <strong>See</strong>
-              &nbsp;everything with&nbsp;
+              <strong>Buy</strong>
+              &nbsp;anything with&nbsp;
               <strong>Clarity</strong>
             </h1>
             <p>
-              Buying eyewear should leave you happy and good-looking, with money in your pocket.
-              Glasses, sunglasses, and contacts—we’ve got your eyes covered.
+              Buying digital services should leave you happy, with money in your pocket.
+              Digital Products, Services and contacts—we’ve got your eyes covered.
             </p>
             <br />
             <Link to={SHOP} className="button">

@@ -12,6 +12,7 @@ class Firebase {
     this.db = app.firestore();
     this.auth = app.auth();
   }
+  
 
   // AUTH ACTIONS ------------
 
@@ -266,4 +267,6 @@ class Firebase {
 
 const firebaseInstance = new Firebase();
 
+
 export default firebaseInstance;
+

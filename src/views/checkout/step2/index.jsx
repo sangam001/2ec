@@ -1,5 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable no-nested-ternary */
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import { Boundary } from '@/components/common';
 import { CHECKOUT_STEP_1, CHECKOUT_STEP_3 } from '@/constants/routes';
@@ -39,7 +37,7 @@ const FormSchema = Yup.object().shape({
 });
 
 const ShippingDetails = ({ profile, shipping, subtotal }) => {
-  useDocumentTitle('Check Out Step 2 | Salinaka');
+  useDocumentTitle('Check Out Step 2 | JexOmen');
   useScrollTop();
   const dispatch = useDispatch();
   const history = useHistory();

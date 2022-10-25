@@ -44,7 +44,7 @@ const Total = ({ isInternational, subtotal }) => {
           className="button"
           disabled={false}
           onClick={submitForm}
-          type="button"
+          type="submit"
         >
           <CheckOutlined />
           &nbsp;

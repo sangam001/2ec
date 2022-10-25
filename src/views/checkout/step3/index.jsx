@@ -11,6 +11,9 @@ import withCheckout from '../hoc/withCheckout';
 import CreditPayment from './CreditPayment';
 import PayPalPayment from './PayPalPayment';
 import Total from './Total';
+import Esewa from './Esewa';
+
+
 
 const FormSchema = Yup.object().shape({
   name: Yup.string()
@@ -30,7 +33,7 @@ const FormSchema = Yup.object().shape({
 });
 
 const Payment = ({ shipping, payment, subtotal }) => {
-  useDocumentTitle('Check Out Final Step | Salinaka');
+  useDocumentTitle('Check Out Final Step | JexOmen');
   useScrollTop();
 
   const initFormikValues = {
@@ -66,6 +69,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
           <Form className="checkout-step-3">
             <CreditPayment />
             <PayPalPayment />
+            <Esewa />
             <Total
               isInternational={shipping.isInternational}
               subtotal={subtotal}

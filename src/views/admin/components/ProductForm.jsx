@@ -14,10 +14,9 @@ import * as Yup from 'yup';
 
 // Default brand names that I used. You can use what you want
 const brandOptions = [
-  { value: 'Salt Maalat', label: 'Salt Maalat' },
-  { value: 'Betsin Maalat', label: 'Betsin Maalat' },
-  { value: 'Sexbomb', label: 'Sexbomb' },
-  { value: 'Black Kibal', label: 'Black Kibal' }
+  { value: 'Online Services', label: 'Online Services' },
+  { value: 'Others', label: 'Others' },
+  { value: 'All', label: 'All' }
 ];
 
 const FormSchema = Yup.object().shape({
@@ -41,12 +40,12 @@ const FormSchema = Yup.object().shape({
     .min(1, 'Please enter at least 1 keyword for this product.'),
   sizes: Yup.array()
     .of(Yup.number())
-    .min(1, 'Please enter a size for this product.'),
+    .min(0, 'Please enter a size for this product.'),
   isFeatured: Yup.boolean(),
   isRecommended: Yup.boolean(),
   availableColors: Yup.array()
-    .of(Yup.string().required())
-    .min(1, 'Please add a default color for this product.')
+    .of(Yup.string())
+    .min(0, 'Please add a default color for this product.')
 });
 
 const ProductForm = ({ product, onSubmit, isLoading }) => {
